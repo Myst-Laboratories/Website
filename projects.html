@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myst Laboratories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-R3aR...=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <h1 class="sidebar-title">
+            <span class="full">
+                <div class="logo-line">Myst</div>
+                <div class="logo-line">Laboratories</div>
+            </span>
+            <span class="short">ML</span>
+        </h1>
+        <button id="toggleSidebar" class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="index.html"><i class="fas fa-home"></i> <span class="link-text">Home</span></a>
+        <a href="projects.html"><i class="fas fa-puzzle-piece"></i> <span class="link-text">Projects</span></a>
+        <a href="about.html"><i class="fas fa-user"></i> <span class="link-text">About Us</span></a>
+    </aside>
+
+    <main class="content">
+        <h2>Our Projects</h2>
+        <a href="https://github.com/Myst-Laboratories/" target="_blank" class="button github-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        <div class="project">
+          <img src="assets/mystara.png" alt="Mystara Project">
+          <div class="project-info">
+            <h3>Mystara</h3>
+            <p>
+              Mystara is a competitive 2D platform fighter built from scratch in C++ using SDL. The game features fast-paced combat, rich character design, and immersive lore. It is the flagship project of Myst Laboratories and a showcase of our technical and creative abilities.
+            </p>
+          </div>
+        </div>
+      
+        <!-- Additional projects can go below -->
+        <div class="project reverse">
+            <img src="assets/lunari.png" alt="Lunari Project">
+            <div class="project-info">
+              <h3>Lunari</h3>
+              <p>
+                Lunari is a personal budgeting and expense tracking application built with Java and Spring Boot. It enables users to manage their finances, set monthly spending goals, and visualize their income vs. expenses over time. Designed with simplicity and performance in mind, Lunari delivers an intuitive interface backed by robust backend services.
+              </p>
+              <!-- <a href="#" class="button">Learn More</a> -->
+            </div>
+          </div>
+      </main>
+
+    <!-- <footer>
+        <p>&copy; 2025 Myst Laboratories. All rights reserved.</p>
+      </footer>       -->
+
+    <script>
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+
+</html>

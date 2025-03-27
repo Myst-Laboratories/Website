@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+}
+
+/* Sidebar */
+
+.sidebar-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-title .full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo-line {
+  display: block;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1b1f3b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  transition: width 0.3s ease;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 2rem;
+}
+
+.sidebar .short {
+  display: none;
+}
+
+.sidebar.collapsed .full {
+  display: none;
+}
+
+.sidebar.collapsed .short {
+  display: inline;
+}
+
+/* Toggle Button */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  transition: justify-content 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+.sidebar a i {
+  width: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* When collapsed, center-align the icons */
+.sidebar.collapsed a {
+  justify-content: center;
+}
+
+.link-text {
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.sidebar.collapsed .link-text {
+  display: none;
+}
+
+/* Main Content Container */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-left: 1rem; /* 👈 Add this line */
+  padding-right: 1rem; /* Optional: symmetrical spacing */
+}
+
+/* General Content Styling */
+main {
+  flex: 1;
+}
+
+.section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Hero Section (Home) */
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* mobile-friendly */
+}
+
+.hero-icon {
+  object-fit: contain;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Founders Profile Section (About) */
+.content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.profile:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.profile img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bio {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #1b1f3b;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Projects Page Layout */
+.content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project img {
+  width: 240px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-info {
+  flex: 1;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5561e6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .project img {
+    width: 200px;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  html, body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: block !important;
+  }
+
+  .content {
+    padding-top: 3.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .profile {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .profile img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.button.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 1rem auto 2rem; /* 👈 centers it horizontally */
+  transition: background-color 0.3s ease;
+  width: fit-content; /* 👈 prevents full width */
+}
+
+.button.github-button:hover {
+  background-color: #000;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Myst Laboratories</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-R3aR...=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <h1 class="sidebar-title">
+      <span class="full">
+        <div class="logo-line">Myst</div>
+        <div class="logo-line">Laboratories</div>
+      </span>
+      <span class="short">ML</span>
+    </h1>
+    <button id="toggleSidebar" class="sidebar-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a href="index.html"><i class="fas fa-home"></i> <span class="link-text">Home</span></a>
+    <a href="projects.html"><i class="fas fa-puzzle-piece"></i> <span class="link-text">Projects</span></a>
+    <a href="about.html"><i class="fas fa-user"></i> <span class="link-text">About Us</span></a>
+  </aside>
+
+  <div class="content">
+    <main>
+      <section class="hero">
+        <div class="hero-container">
+          <img src="assets/myst-labs-icon.png" alt="Myst Labs Icon" class="hero-icon" />
+          <div class="hero-text">
+            <h2>Innovating Tomorrow's Technologies</h2>
+            <p>
+              Myst-Laboratories is a creative innovation studio dedicated to learning, experimenting, and building.
+              We explore new technologies, develop unique projects, and push the boundaries of what’s possible—whether in
+              game development, software engineering, or beyond. Our passion extends to creating, discovering, and mastering new skills.
+              At Myst-Laboratories, we embrace curiosity and innovation, turning ideas into reality.          
+            </p>
+          </div>
+        </div>
+      </section>      
+
+      <section class="section">
+        <h3>Featured Project – Mystara</h3>
+        <p><a href="https://github.com/Myst-Laboratories/Mystara" class="button"><strong>Mystara</strong></a> is a competitive 2D platform fighter blending lightning-fast combat mechanics with deep worldbuilding. Built from scratch using custom tools, it showcases our lab’s dedication to innovation, design, and raw tech execution.</p>
+      </section>      
+
+      <section id="about" class="section">
+        <h3>About Us</h3>
+        <p>
+          Myst Laboratories is a future-focused research and development hub that brings together brilliant minds from
+          across disciplines—
+          AI, biotechnology, quantum computing, and material science—to solve real-world problems. Our mission is to
+          transform bold ideas into tangible breakthroughs.
+        </p>
+      </section>
+    </main>
+
+    <!-- <footer>
+      <p>&copy; 2025 Myst Laboratories. All rights reserved.</p>
+    </footer> -->
+    
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  </script>
+</body>
+
+</html>

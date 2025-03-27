@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – Myst Laboratories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-R3aR...=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <h1 class="sidebar-title">
+            <span class="full">
+                <div class="logo-line">Myst</div>
+                <div class="logo-line">Laboratories</div>
+            </span>
+            <span class="short">ML</span>
+        </h1>
+        <button id="toggleSidebar" class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="index.html"><i class="fas fa-home"></i> <span class="link-text">Home</span></a>
+        <a href="projects.html"><i class="fas fa-puzzle-piece"></i> <span class="link-text">Projects</span></a>
+        <a href="about.html"><i class="fas fa-user"></i> <span class="link-text">About Us</span></a>
+    </aside>
+
+    <main class="content">
+        <h2>Meet the Founders</h2>
+
+        <div class="profile">
+            <img src="assets/daniel.JPEG" alt="Co-Founder">
+            <div class="bio">
+                <h3>Co-Founder</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan justo ac risus commodo, a
+                    pharetra augue blandit. Curabitur vestibulum urna sed sapien lacinia, vitae tempor velit convallis.
+                </p>
+                <a href="https://www.linkedin.com/in/daniel-rivera-834692198/">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="profile reverse">
+            <img src="assets/jeffrey.jpeg" alt="Co-Founder">
+            <div class="bio">
+                <h3>Co-Founder</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                </p>
+                <a href="https://www.linkedin.com/in/jeffrey-gaines-128878218/">LinkedIn</a>
+            </div>
+        </div>
+        <!-- <footer>
+            <p>&copy; 2025 Myst Laboratories. All rights reserved.</p>
+          </footer>           -->
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+
+</html>
