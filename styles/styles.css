@@ -149,6 +149,20 @@ main {
   color: #555;
 }
 
+.gradient-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Hero Section (Home) */
 .hero {
   padding: 4rem 2rem;
@@ -355,4 +369,10 @@ footer {
 
 .button.github-button:hover {
   background-color: #000;
+}
+
+.gradient-section {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  padding: 4rem 2rem;
 }
