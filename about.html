@@ -60,17 +60,11 @@
     <script>
         const toggleBtn = document.getElementById('toggleSidebar');
         const sidebar = document.getElementById('sidebar');
-        const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
-        if (isCollapsed) {
-          sidebar.classList.add('collapsed');
-        }
+
         toggleBtn.addEventListener('click', () => {
-          sidebar.classList.toggle('collapsed');
-          const currentlyCollapsed = sidebar.classList.contains('collapsed');
-          localStorage.setItem('sidebarCollapsed', currentlyCollapsed);
+            sidebar.classList.toggle('collapsed');
         });
-      </script>
-      
+    </script>
 </body>
 
 </html>
